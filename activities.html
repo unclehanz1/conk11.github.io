@@ -1,50 +1,33 @@
 <script>
-document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("click", function (e) {
+  const a = e.target.closest("a");
+  if (!a) return;
 
-  document.querySelectorAll("a").forEach(function (a) {
+  const t = a.textContent.trim();
 
-    // КЛОНИРУЕМ ссылку — так удаляются ВСЕ обработчики
-    const clean = a.cloneNode(true);
+  const rules = [
+    [/О больнице|Администрация|Политика|этике|Послания|Нормативно/i, "about.html"],
+    [/Услуги и цены/i, "service.html"],
+    [/Для пациента/i, "patients.html"],
+    [/Направления/i, "activities.html"],
+    [/Обратная связь/i, "obr.html"],
+    [/International/i, "int.html"],
+    [/Наука|образование/i, "nauka.html"],
+    [/ОСМС|ГОБМП/i, "index.html"],
+    [/Наши доктора|CHECK UP/i, "https://bmcudp.org"]
+  ];
 
-    const text = clean.textContent.trim();
-
-    if (/О больнице|Администрация|Политика|этике|Послания|Нормативно/i.test(text)) {
-      clean.href = "about.html";
+  for (const [re, url] of rules) {
+    if (re.test(t)) {
+      e.preventDefault();
+      e.stopImmediatePropagation();
+      e.stopPropagation();
+      window.location.href = url;
+      return false;
     }
-    else if (/Услуги|цены/i.test(text)) {
-      clean.href = "service.html";
-    }
-    else if (/Для пациента/i.test(text)) {
-      clean.href = "patients.html";
-    }
-    else if (/Направления/i.test(text)) {
-      clean.href = "activities.html";
-    }
-    else if (/Обратная связь/i.test(text)) {
-      clean.href = "obr.html";
-    }
-    else if (/International/i.test(text)) {
-      clean.href = "int.html";
-    }
-    else if (/Наука|образование/i.test(text)) {
-      clean.href = "nauka.html";
-    }
-    else if (/ОСМС|ГОБМП/i.test(text)) {
-      clean.href = "index.html";
-    }
-    else if (/Наши доктора|CHECK UP/i.test(text)) {
-      clean.href = "https://bmcudp.org";
-      clean.target = "_blank";
-    } else {
-      return;
-    }
-
-    a.replaceWith(clean);
-  });
-
-});
+  }
+}, true);
 </script>
-
 <!DOCTYPE html>
 <!-- saved from url=(0032)https://bmcudp.kz/ru/activities/ -->
 <html prefix="og: http://ogp.me/ns# profile: http://ogp.me/ns/profile# business: http://ogp.me/ns/business# place: http://ogp.me/ns/place#" class="bx-core bx-win bx-no-touch bx-no-retina bx-chrome desktop landscape"><!--<![endif]--><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -861,10 +844,10 @@ document.addEventListener("DOMContentLoaded", function () {
 	                                                <li itemprop="name"><a href="https://bmcudp.kz/ru/patients/service-audit-of-hospital-quality-of-care/" title="Служба менеджмента качества и безопасности пациента" itemprop="url">Служба менеджмента качества и безопасности пациента</a></li>
                                 
 				</ul></li>	
-	                                                <li itemprop="name"><a href="https://bmcudp.kz/ru/osms-gobmp/" title="ОСМС ГОБМП" itemprop="url">ОСМС ГОБМП</a></li>
+	                                                <li itemprop="name"><a href="index.html" title="ОСМС ГОБМП" itemprop="url">ОСМС ГОБМП</a></li>
                                 
 		
-	                                                <li itemprop="name"><a href="https://bmcudp.kz/ru/our-doctors/" title="Наши доктора" itemprop="url">Наши доктора</a></li>
+	                                                <li itemprop="name"><a href="index.html" title="Наши доктора" itemprop="url">Наши доктора</a></li>
                                 
 		
 						<li itemprop="name">
@@ -872,10 +855,10 @@ document.addEventListener("DOMContentLoaded", function () {
 				<ul>
 		    
 		
-	                                                <li itemprop="name"><a href="activities.html" title="Поликлиника" itemprop="url">Поликлиника</a></li>
+	                                                <li itemprop="name"><a href="/activities.html" title="Поликлиника" itemprop="url">Поликлиника</a></li>
                                 
 		
-	                                                <li itemprop="name"><a href="activities.html" title="Диагностика" itemprop="url">Диагностика</a></li>
+	                                                <li itemprop="name"><a href="/activities.html" title="Диагностика" itemprop="url">Диагностика</a></li>
                                 
 		
 						<li itemprop="name"><a href="activities.html" title="Хирургия" itemprop="url">Хирургия</a>
@@ -1937,38 +1920,38 @@ div.lngswitch ul.pagination>.active>span:focus {
 	                                                <li itemprop="name"><a href="https://bmcudp.kz/ru/patients/service-audit-of-hospital-quality-of-care/" title="Служба менеджмента качества и безопасности пациента" itemprop="url">Служба менеджмента качества и безопасности пациента</a></li>
                                 
 				</ul></li>	
-	                                                <li itemprop="name"><a href="https://bmcudp.kz/ru/osms-gobmp/" title="ОСМС ГОБМП" itemprop="url">ОСМС ГОБМП</a></li>
+	                                                <li itemprop="name"><a href="index.html" title="ОСМС ГОБМП" itemprop="url">ОСМС ГОБМП</a></li>
                                 
 		
-	                                                <li itemprop="name"><a href="https://bmcudp.kz/ru/our-doctors/" title="Наши доктора" itemprop="url">Наши доктора</a></li>
+	                                                <li itemprop="name"><a href="index.html" title="Наши доктора" itemprop="url">Наши доктора</a></li>
                                 
 		
 						<li itemprop="name" class="active">
-                <a href="https://bmcudp.kz/ru/activities/" title="Направления" itemprop="url">Направления</a>
+                <a href="activities.html" title="Направления" itemprop="url">Направления</a>
 				<ul style="display: none;">
 		    
 		
-	                                                <li itemprop="name"><a href="https://bmcudp.kz/ru/activities/poliklinika/" title="Поликлиника" itemprop="url">Поликлиника</a></li>
+	                                                <li itemprop="name"><a href="activities.html" title="Поликлиника" itemprop="url">Поликлиника</a></li>
                                 
 		
-	                                                <li itemprop="name"><a href="https://bmcudp.kz/ru/activities/diagnostika/" title="Диагностика" itemprop="url">Диагностика</a></li>
+	                                                <li itemprop="name"><a href="activities.html" title="Диагностика" itemprop="url">Диагностика</a></li>
                                 
 		
-						<li itemprop="name"><a href="https://bmcudp.kz/ru/activities/hirurgiya/" title="Хирургия" itemprop="url">Хирургия</a>
+						<li itemprop="name"><a href="activities.html" title="Хирургия" itemprop="url">Хирургия</a>
 				<ul style="display: none;">
 		    
 		
-						<li itemprop="name"><a href="https://bmcudp.kz/ru/activities/hirurgiya/Neurosurgery/" title="Нейрохирургия" itemprop="url">Нейрохирургия</a>
+						<li itemprop="name"><a href="activities.html" title="Нейрохирургия" itemprop="url">Нейрохирургия</a>
 				<ul style="display: none;">
 		    
 		
-	                                                <li itemprop="name"><a href="https://bmcudp.kz/ru/activities/hirurgiya/Neurosurgery/1011/" title="О нейрохирургии" itemprop="url">О нейрохирургии</a></li>
+	                                                <li itemprop="name"><a href="activities.html" title="О нейрохирургии" itemprop="url">О нейрохирургии</a></li>
                                 
 		
-	                                                <li itemprop="name"><a href="https://bmcudp.kz/ru/activities/hirurgiya/Neurosurgery/1012/" title="Заболевания и их лечение" itemprop="url">Заболевания и их лечение</a></li>
+	                                                <li itemprop="name"><a href="hactivities.html" title="Заболевания и их лечение" itemprop="url">Заболевания и их лечение</a></li>
                                 
 		
-	                                                <li itemprop="name"><a href="https://bmcudp.kz/ru/activities/hirurgiya/Neurosurgery/1013/" title="Предхирургическая диагностика" itemprop="url">Предхирургическая диагностика</a></li>
+	                                                <li itemprop="name"><a href="activities.html" title="Предхирургическая диагностика" itemprop="url">Предхирургическая диагностика</a></li>
                                 
 		
 	                                                <li itemprop="name"><a href="https://bmcudp.kz/ru/activities/hirurgiya/Neurosurgery/1014/" title="Стажировка для врачей" itemprop="url">Стажировка для врачей</a></li>
@@ -2371,14 +2354,14 @@ div.lngswitch ul.pagination>.active>span:focus {
 <!--<div class="container">
 	<section class="ins5">-->
 <h1>Направления</h1>		<div class="list-group" style="padding-top: 10px;">
-			<a href="https://bmcudp.kz/ru/activities/poliklinika/" class="list-group-item"><h4>Поликлиника</h4></a>
-			<a href="https://bmcudp.kz/ru/activities/diagnostika/" class="list-group-item"><h4>Диагностика</h4></a>
-			<a href="https://bmcudp.kz/ru/activities/hirurgiya/" class="list-group-item"><h4>Хирургия</h4></a>
-			<a href="https://bmcudp.kz/ru/activities/teropiya/" class="list-group-item"><h4>Терапия</h4></a>
-			<a href="https://bmcudp.kz/ru/activities/centers/" class="list-group-item"><h4>Клинические центры</h4></a>
-			<a href="https://bmcudp.kz/ru/activities/photodynamic-therapy/" class="list-group-item"><h4>Фотодинамическая терапия</h4></a>
-			<a href="https://bmcudp.kz/ru/activities/localkomissiya/" class="list-group-item"><h4>Локальная комиссия по биоэтике БМЦ</h4></a>
-			<a href="https://bmcudp.kz/ru/activities/nonclinical/" class="list-group-item"><h4>Неклинические подразделения</h4></a>
+			<a href="activities.html" class="list-group-item"><h4>Поликлиника</h4></a>
+			<a href="activities.html" class="list-group-item"><h4>Диагностика</h4></a>
+			<a href="activities.html" class="list-group-item"><h4>Хирургия</h4></a>
+			<a href="activities.html" class="list-group-item"><h4>Терапия</h4></a>
+			<a href="activities.html" class="list-group-item"><h4>Клинические центры</h4></a>
+			<a href="activities.html" class="list-group-item"><h4>Фотодинамическая терапия</h4></a>
+			<a href="activities.html" class="list-group-item"><h4>Локальная комиссия по биоэтике БМЦ</h4></a>
+			<a href="activities.html" class="list-group-item"><h4>Неклинические подразделения</h4></a>
 		</div>
 <!--	</section>
 </div>-->
@@ -2464,6 +2447,7 @@ div.lngswitch ul.pagination>.active>span:focus {
         margin: 10px 0 10px 0;
     }
 </style>
+
 <div id="slider-partners">
     <a class="buttons prev fa fa-angle-left" href="https://bmcudp.kz/ru/activities/#"></a>
     <div class="viewport">
@@ -3507,55 +3491,55 @@ $(document).ready(function(){
 				</ul></li>	
 	                                                <li itemprop="name"><a href="https://bmcudp.kz/ru/patients/service-audit-of-hospital-quality-of-care/" title="Служба менеджмента качества и безопасности пациента" itemprop="url">Служба менеджмента качества и безопасности пациента</a></li>
                                 
-				</ul></li><li><a href="https://bmcudp.kz/ru/osms-gobmp/" title="ОСМС ГОБМП" itemprop="url">ОСМС ГОБМП</a></li><li><a href="https://bmcudp.kz/ru/our-doctors/" title="Наши доктора" itemprop="url">Наши доктора</a></li><li class="active"><a href="https://bmcudp.kz/ru/activities/" title="Направления" itemprop="url" class="rd-with-ul">Направления<span class="rd-submenu-toggle"></span></a><ul class="rd-mobilemenu_submenu" style="display: none;">
+				</ul></li><li><a href="index.html" title="ОСМС ГОБМП" itemprop="url">ОСМС ГОБМП</a></li><li><a href="index.html" title="Наши доктора" itemprop="url">Наши доктора</a></li><li class="active"><a href="https://bmcudp.kz/ru/activities/" title="Направления" itemprop="url" class="rd-with-ul">Направления<span class="rd-submenu-toggle"></span></a><ul class="rd-mobilemenu_submenu" style="display: none;">
 		    
 		
-	                                                <li itemprop="name"><a href="https://bmcudp.kz/ru/activities/poliklinika/" title="Поликлиника" itemprop="url">Поликлиника</a></li>
+	                                                <li itemprop="name"><a href="activities.html" title="Поликлиника" itemprop="url">Поликлиника</a></li>
                                 
 		
-	                                                <li itemprop="name"><a href="https://bmcudp.kz/ru/activities/diagnostika/" title="Диагностика" itemprop="url">Диагностика</a></li>
+	                                                <li itemprop="name"><a href="activities.html" title="Диагностика" itemprop="url">Диагностика</a></li>
                                 
 		
-						<li itemprop="name"><a href="https://bmcudp.kz/ru/activities/hirurgiya/" title="Хирургия" itemprop="url">Хирургия</a>
+						<li itemprop="name"><a href="activities.html" title="Хирургия" itemprop="url">Хирургия</a>
 				<ul>
 		    
 		
-						<li itemprop="name"><a href="https://bmcudp.kz/ru/activities/hirurgiya/Neurosurgery/" title="Нейрохирургия" itemprop="url">Нейрохирургия</a>
+						<li itemprop="name"><a href="activities.html" title="Нейрохирургия" itemprop="url">Нейрохирургия</a>
 				<ul>
 		    
 		
-	                                                <li itemprop="name"><a href="https://bmcudp.kz/ru/activities/hirurgiya/Neurosurgery/1011/" title="О нейрохирургии" itemprop="url">О нейрохирургии</a></li>
+	                                                <li itemprop="name"><a href="activities.html" title="О нейрохирургии" itemprop="url">О нейрохирургии</a></li>
                                 
 		
-	                                                <li itemprop="name"><a href="https://bmcudp.kz/ru/activities/hirurgiya/Neurosurgery/1012/" title="Заболевания и их лечение" itemprop="url">Заболевания и их лечение</a></li>
+	                                                <li itemprop="name"><a href="activities.html" title="Заболевания и их лечение" itemprop="url">Заболевания и их лечение</a></li>
                                 
 		
-	                                                <li itemprop="name"><a href="https://bmcudp.kz/ru/activities/hirurgiya/Neurosurgery/1013/" title="Предхирургическая диагностика" itemprop="url">Предхирургическая диагностика</a></li>
+	                                                <li itemprop="name"><a href="activities.html" title="Предхирургическая диагностика" itemprop="url">Предхирургическая диагностика</a></li>
                                 
 		
-	                                                <li itemprop="name"><a href="https://bmcudp.kz/ru/activities/hirurgiya/Neurosurgery/1014/" title="Стажировка для врачей" itemprop="url">Стажировка для врачей</a></li>
+	                                                <li itemprop="name"><a href="activities.html" title="Стажировка для врачей" itemprop="url">Стажировка для врачей</a></li>
                                 
 		
-	                                                <li itemprop="name"><a href="https://bmcudp.kz/ru/activities/hirurgiya/Neurosurgery/1018/" title="Контакты" itemprop="url">Контакты</a></li>
+	                                                <li itemprop="name"><a href="activities.html" title="Контакты" itemprop="url">Контакты</a></li>
                                 
 				</ul></li>	
-						<li itemprop="name"><a href="https://bmcudp.kz/ru/activities/hirurgiya/robotizirovannaja-hirurgija/" title="Роботизированная хирургия" itemprop="url">Роботизированная хирургия</a>
+						<li itemprop="name"><a href="activities.html" title="Роботизированная хирургия" itemprop="url">Роботизированная хирургия</a>
 				<ul>
 		    
 		
-	                                                <li itemprop="name"><a href="https://bmcudp.kz/ru/activities/hirurgiya/robotizirovannaja-hirurgija/about-technology/" title="О технологии" itemprop="url">О технологии</a></li>
+	                                                <li itemprop="name"><a href="activities.html" title="О технологии" itemprop="url">О технологии</a></li>
                                 
 		
-	                                                <li itemprop="name"><a href="https://bmcudp.kz/ru/activities/hirurgiya/robotizirovannaja-hirurgija/doctors/" title="Врачи" itemprop="url">Врачи</a></li>
+	                                                <li itemprop="name"><a href="activities.html" title="Врачи" itemprop="url">Врачи</a></li>
                                 
 				</ul></li>	
-	                                                <li itemprop="name"><a href="https://bmcudp.kz/ru/activities/hirurgiya/khirurgicheskoe-otdelenie-1-otorinolaringologiya/" title="Хирургическое отделение № 1 (Оториноларингология)" itemprop="url">Хирургическое отделение № 1 (Оториноларингология)</a></li>
+	                                                <li itemprop="name"><a href="hactivities.html" title="Хирургическое отделение № 1 (Оториноларингология)" itemprop="url">Хирургическое отделение № 1 (Оториноларингология)</a></li>
                                 
 		
-	                                                <li itemprop="name"><a href="https://bmcudp.kz/ru/activities/hirurgiya/khirurgicheskoe-otdelenie-2-obshchaya-khirurgiya/" title="Хирургическое отделение № 2 (общая хирургия)" itemprop="url">Хирургическое отделение № 2 (общая хирургия)</a></li>
+	                                                <li itemprop="name"><a href="activities.html" title="Хирургическое отделение № 2 (общая хирургия)" itemprop="url">Хирургическое отделение № 2 (общая хирургия)</a></li>
                                 
 		
-	                                                <li itemprop="name"><a href="https://bmcudp.kz/ru/activities/hirurgiya/khirurgicheskoe-otdelenie-3-travmatologiya/" title="Хирургическое отделение № 3 (Травматология)" itemprop="url">Хирургическое отделение № 3 (Травматология)</a></li>
+	                                                <li itemprop="name"><a href="activities.html" title="Хирургическое отделение № 3 (Травматология)" itemprop="url">Хирургическое отделение № 3 (Травматология)</a></li>
                                 
 		
 	                                                <li itemprop="name"><a href="https://bmcudp.kz/ru/activities/hirurgiya/khirurgicheskoe-otdelenie-4-urologiya-proktologiya-gnoynaya-khirurgiya/" title="Хирургическое отделение № 4 (урология, проктология, гнойная хирургия)" itemprop="url">Хирургическое отделение № 4 (урология, проктология, гнойная хирургия)</a></li>
@@ -3873,4 +3857,31 @@ $(document).ready(function(){
 								Принимаю
 							</button></div> <div class="b24-form-btn-block"><button type="button" class="b24-form-btn b24-form-btn-white b24-form-btn-border">
 								Не принимаю
-							</button></div></div></div></div> <div class="b24-window-scroll-anchor"></div></div> <!----></div></div></div></div></div></div></div></body></html>
+							</button></div></div></div></div> <div class="b24-window-scroll-anchor"></div></div> <!----></div></div></div></div></div></div></div>
+
+	<script>
+document.querySelectorAll('.sf-menu > li').forEach(li => {
+  const topText = li.querySelector(':scope > a')?.textContent || '';
+
+  let target = null;
+
+  if (/О\s*больнице/i.test(topText)) target = 'about.html';
+  else if (/Услуги|Цены/i.test(topText)) target = 'service.html';
+  else if (/Для\s*пациента/i.test(topText)) target = 'patients.html';
+  else if (/Направления/i.test(topText)) target = 'activities.html';
+  else if (/Обратная\s*связь/i.test(topText)) target = 'obr.html';
+  else if (/International/i.test(topText)) target = 'int.html';
+  else if (/Наука|образование/i.test(topText)) target = 'nauka.html';
+  else if (/ОСМС|ГОБМП/i.test(topText)) target = 'index.html';
+  else if (/Наши\s*доктора|CHECK\s*UP/i.test(topText)) target = 'https://bmcudp.org';
+
+  if (!target) return;
+
+  // 🔥 ВАЖНО: переписываем ВСЕ ссылки внутри li
+  li.querySelectorAll('a').forEach(a => {
+    a.href = target;
+  });
+});
+
+</script>
+</body></html>

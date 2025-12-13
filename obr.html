@@ -1,34 +1,3 @@
-<script>
-document.addEventListener("click", function (e) {
-  const a = e.target.closest("a");
-  if (!a) return;
-
-  const t = a.textContent.trim();
-
-  const rules = [
-    [/О больнице|Администрация|Политика|этике|Послания|Нормативно/i, "about.html"],
-    [/Услуги|цены/i, "service.html"],
-    [/Для пациента/i, "patients.html"],
-    [/Направления/i, "activities.html"],
-    [/Обратная связь/i, "obr.html"],
-    [/International/i, "int.html"],
-    [/Наука|образование/i, "nauka.html"],
-    [/ОСМС|ГОБМП/i, "index.html"],
-    [/Наши доктора|CHECK UP/i, "https://bmcudp.org"]
-  ];
-
-  for (const [re, url] of rules) {
-    if (re.test(t)) {
-      e.preventDefault();
-      e.stopImmediatePropagation();
-      e.stopPropagation();
-      window.location.href = url;
-      return false;
-    }
-  }
-}, true);
-</script>
-
 <!DOCTYPE html>
 <!-- saved from url=(0014)about:internet -->
 <html prefix="og: http://ogp.me/ns# profile: http://ogp.me/ns/profile# business: http://ogp.me/ns/business# place: http://ogp.me/ns/place#" class="bx-core bx-win bx-no-touch bx-no-retina bx-chrome desktop landscape"><!--<![endif]--><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -845,10 +814,10 @@ document.addEventListener("click", function (e) {
 	                                                <li itemprop="name"><a href="https://bmcudp.kz/ru/patients/service-audit-of-hospital-quality-of-care/" title="Служба менеджмента качества и безопасности пациента" itemprop="url">Служба менеджмента качества и безопасности пациента</a></li>
                                 
 				</ul></li>	
-	                                                <li itemprop="name"><a href="https://bmcudp.kz/ru/osms-gobmp/" title="ОСМС ГОБМП" itemprop="url">ОСМС ГОБМП</a></li>
+	                                                <li itemprop="name"><a href="index.html" title="ОСМС ГОБМП" itemprop="url">ОСМС ГОБМП</a></li>
                                 
 		
-	                                                <li itemprop="name"><a href="https://bmcudp.kz/ru/our-doctors/" title="Наши доктора" itemprop="url">Наши доктора</a></li>
+	                                                <li itemprop="name"><a href="index.html" title="Наши доктора" itemprop="url">Наши доктора</a></li>
                                 
 		
 						<li itemprop="name">
@@ -1921,10 +1890,10 @@ div.lngswitch ul.pagination>.active>span:focus {
 	                                                <li itemprop="name"><a href="https://bmcudp.kz/ru/patients/service-audit-of-hospital-quality-of-care/" title="Служба менеджмента качества и безопасности пациента" itemprop="url">Служба менеджмента качества и безопасности пациента</a></li>
                                 
 				</ul></li>	
-	                                                <li itemprop="name"><a href="https://bmcudp.kz/ru/osms-gobmp/" title="ОСМС ГОБМП" itemprop="url">ОСМС ГОБМП</a></li>
+	                                                <li itemprop="name"><a href="index.html" title="ОСМС ГОБМП" itemprop="url">ОСМС ГОБМП</a></li>
                                 
 		
-	                                                <li itemprop="name"><a href="https://bmcudp.kz/ru/our-doctors/" title="Наши доктора" itemprop="url">Наши доктора</a></li>
+	                                                <li itemprop="name"><a href="index.html" title="Наши доктора" itemprop="url">Наши доктора</a></li>
                                 
 		
 						<li itemprop="name">
@@ -2039,25 +2008,25 @@ div.lngswitch ul.pagination>.active>span:focus {
 				<ul>
 		    
 		
-	                                                <li itemprop="name"><a href="https://bmcudp.kz/ru/feedback/contacts/" title="Контакты" itemprop="url">Контакты</a></li>
+	                                                <li itemprop="name"><a href="obr.html" title="Контакты" itemprop="url">Контакты</a></li>
                                 
 		
-	                                                <li itemprop="name"><a href="https://bmcudp.kz/ru/feedback/blog/" title="Блог директора Больницы" itemprop="url">Блог директора Больницы</a></li>
+	                                                <li itemprop="name"><a href="obr.html" title="Блог директора Больницы" itemprop="url">Блог директора Больницы</a></li>
                                 
 		
-	                                                <li itemprop="name"><a href="https://bmcudp.kz/ru/feedback/letter-of-appreciation/" title="Благодарственные письма" itemprop="url">Благодарственные письма</a></li>
+	                                                <li itemprop="name"><a href="obr.html" title="Благодарственные письма" itemprop="url">Благодарственные письма</a></li>
                                 
 		
-	                                                <li itemprop="name"><a href="https://bmcudp.kz/ru/feedback/question_answer/" title="Вопросы и ответы" itemprop="url">Вопросы и ответы</a></li>
+	                                                <li itemprop="name"><a href="obr.html" title="Вопросы и ответы" itemprop="url">Вопросы и ответы</a></li>
                                 
 		
-	                                                <li itemprop="name"><a href="https://bmcudp.kz/ru/feedback/complaints/" title="Жалобы и предложения" itemprop="url">Жалобы и предложения</a></li>
+	                                                <li itemprop="name"><a href="obr.html" title="Жалобы и предложения" itemprop="url">Жалобы и предложения</a></li>
                                 
 		
-	                                                <li itemprop="name"><a href="https://bmcudp.kz/ru/feedback/anti-corruption_compliance/" title="Антикоррупционный комплаенс" itemprop="url">Антикоррупционный комплаенс</a></li>
+	                                                <li itemprop="name"><a href="obr.html" title="Антикоррупционный комплаенс" itemprop="url">Антикоррупционный комплаенс</a></li>
                                 
 		
-	                                                <li itemprop="name"><a href="https://bmcudp.kz/ru/feedback/vacancies/" title="Вакансии" itemprop="url">Вакансии</a></li>
+	                                                <li itemprop="name"><a href="obr.html" title="Вакансии" itemprop="url">Вакансии</a></li>
                                 
 				</ul></li>	
 						<li itemprop="name">
@@ -2355,13 +2324,13 @@ div.lngswitch ul.pagination>.active>span:focus {
 <!--<div class="container">
 	<section class="ins5">-->
 <h1>Обратная связь</h1>		<div class="list-group" style="padding-top: 10px;">
-			<a href="https://bmcudp.kz/ru/feedback/contacts/" class="list-group-item"><h4>Контакты</h4></a>
-			<a href="https://bmcudp.kz/ru/feedback/blog/" class="list-group-item"><h4>Блог директора Больницы</h4></a>
-			<a href="https://bmcudp.kz/ru/feedback/letter-of-appreciation/" class="list-group-item"><h4>Благодарственные письма</h4></a>
-			<a href="https://bmcudp.kz/ru/feedback/question_answer/" class="list-group-item"><h4>Вопросы и ответы</h4></a>
-			<a href="https://bmcudp.kz/ru/feedback/complaints/" class="list-group-item"><h4>Жалобы и предложения</h4></a>
-			<a href="https://bmcudp.kz/ru/feedback/anti-corruption_compliance/" class="list-group-item"><h4>Антикоррупционный комплаенс</h4></a>
-			<a href="https://bmcudp.kz/ru/feedback/vacancies/" class="list-group-item"><h4>Вакансии</h4></a>
+			<a href="obr.html" class="list-group-item"><h4>Контакты</h4></a>
+			<a href="obr.html" class="list-group-item"><h4>Блог директора Больницы</h4></a>
+			<a href="obr.html" class="list-group-item"><h4>Благодарственные письма</h4></a>
+			<a href="obr.html" class="list-group-item"><h4>Вопросы и ответы</h4></a>
+			<a href="obr.html" class="list-group-item"><h4>Жалобы и предложения</h4></a>
+			<a href="obr.html" class="list-group-item"><h4>Антикоррупционный комплаенс</h4></a>
+			<a href="obr.html" class="list-group-item"><h4>Вакансии</h4></a>
 		</div>
 <!--	</section>
 </div>-->
@@ -2558,13 +2527,13 @@ div.lngswitch ul.pagination>.active>span:focus {
                         </div>
                         <div class="box" style="display: flex; flex-wrap: wrap;">
                             <div class="box_aside">
-                                <a href="https://bmcudp.kz/ru/feedback/contacts/">
+                                <a href="obr.html">
                                     <img src="./bmcudp.kz_files/mapPinArea_icon.svg" alt="Адрес">
                                 </a>
                             </div>
                             <div class="box_cnt__no-flow">
                                     г. Астана, ул. Е495 №2<br>
-                                    <a style="color: #0272B8; font-size: 16px;" href="https://bmcudp.kz/ru/feedback/contacts/">Схема проезда</a>
+                                    <a style="color: #0272B8; font-size: 16px;" href="obr.html">Схема проезда</a>
                             </div>
                         </div>
                         <div class="box" style="display: flex; flex-wrap: wrap;">
@@ -3490,7 +3459,7 @@ $(document).ready(function(){
 				</ul></li>	
 	                                                <li itemprop="name"><a href="https://bmcudp.kz/ru/patients/service-audit-of-hospital-quality-of-care/" title="Служба менеджмента качества и безопасности пациента" itemprop="url">Служба менеджмента качества и безопасности пациента</a></li>
                                 
-				</ul></li><li><a href="https://bmcudp.kz/ru/osms-gobmp/" title="ОСМС ГОБМП" itemprop="url">ОСМС ГОБМП</a></li><li><a href="https://bmcudp.kz/ru/our-doctors/" title="Наши доктора" itemprop="url">Наши доктора</a></li><li><a href="https://bmcudp.kz/ru/activities/" title="Направления" itemprop="url" class="rd-with-ul">Направления<span class="rd-submenu-toggle"></span></a><ul class="rd-mobilemenu_submenu" style="display: none;">
+				</ul></li><li><a href="index.html" title="ОСМС ГОБМП" itemprop="url">ОСМС ГОБМП</a></li><li><a href="index.html" title="Наши доктора" itemprop="url">Наши доктора</a></li><li><a href="https://bmcudp.kz/ru/activities/" title="Направления" itemprop="url" class="rd-with-ul">Направления<span class="rd-submenu-toggle"></span></a><ul class="rd-mobilemenu_submenu" style="display: none;">
 		    
 		
 	                                                <li itemprop="name"><a href="https://bmcudp.kz/ru/activities/poliklinika/" title="Поликлиника" itemprop="url">Поликлиника</a></li>
@@ -3597,25 +3566,25 @@ $(document).ready(function(){
 				</ul></li></ul></li><li class="active"><a href="https://bmcudp.kz/ru/feedback/" title="Обратная связь" itemprop="url" class="rd-with-ul">Обратная связь<span class="rd-submenu-toggle"></span></a><ul class="rd-mobilemenu_submenu" style="display: none;">
 		    
 		
-	                                                <li itemprop="name"><a href="https://bmcudp.kz/ru/feedback/contacts/" title="Контакты" itemprop="url">Контакты</a></li>
+	                                                <li itemprop="name"><a href="obr.html" title="Контакты" itemprop="url">Контакты</a></li>
                                 
 		
-	                                                <li itemprop="name"><a href="https://bmcudp.kz/ru/feedback/blog/" title="Блог директора Больницы" itemprop="url">Блог директора Больницы</a></li>
+	                                                <li itemprop="name"><a href="obr.html" title="Блог директора Больницы" itemprop="url">Блог директора Больницы</a></li>
                                 
 		
-	                                                <li itemprop="name"><a href="https://bmcudp.kz/ru/feedback/letter-of-appreciation/" title="Благодарственные письма" itemprop="url">Благодарственные письма</a></li>
+	                                                <li itemprop="name"><a href="obr.html" title="Благодарственные письма" itemprop="url">Благодарственные письма</a></li>
                                 
 		
-	                                                <li itemprop="name"><a href="https://bmcudp.kz/ru/feedback/question_answer/" title="Вопросы и ответы" itemprop="url">Вопросы и ответы</a></li>
+	                                                <li itemprop="name"><a href="obr.html" title="Вопросы и ответы" itemprop="url">Вопросы и ответы</a></li>
                                 
 		
-	                                                <li itemprop="name"><a href="https://bmcudp.kz/ru/feedback/complaints/" title="Жалобы и предложения" itemprop="url">Жалобы и предложения</a></li>
+	                                                <li itemprop="name"><a href="obr.html" title="Жалобы и предложения" itemprop="url">Жалобы и предложения</a></li>
                                 
 		
-	                                                <li itemprop="name"><a href="https://bmcudp.kz/ru/feedback/anti-corruption_compliance/" title="Антикоррупционный комплаенс" itemprop="url">Антикоррупционный комплаенс</a></li>
+	                                                <li itemprop="name"><a href="obr.html" title="Антикоррупционный комплаенс" itemprop="url">Антикоррупционный комплаенс</a></li>
                                 
 		
-	                                                <li itemprop="name"><a href="https://bmcudp.kz/ru/feedback/vacancies/" title="Вакансии" itemprop="url">Вакансии</a></li>
+	                                                <li itemprop="name"><a href="obr.html" title="Вакансии" itemprop="url">Вакансии</a></li>
                                 
 				</ul></li><li><a href="https://bmcudp.kz/ru/med-tourism/" title="International" itemprop="url" class="rd-with-ul">International<span class="rd-submenu-toggle"></span></a><ul class="rd-mobilemenu_submenu" style="display: none;">
 		    

@@ -1,34 +1,3 @@
-<script>
-document.addEventListener("click", function (e) {
-  const a = e.target.closest("a");
-  if (!a) return;
-
-  const t = a.textContent.trim();
-
-  const rules = [
-    [/О больнице|Администрация|Политика|этике|Послания|Нормативно/i, "about.html"],
-    [/Услуги|цены/i, "service.html"],
-    [/Для пациента/i, "patients.html"],
-    [/Направления/i, "activities.html"],
-    [/Обратная связь/i, "obr.html"],
-    [/International/i, "int.html"],
-    [/Наука|образование/i, "nauka.html"],
-    [/ОСМС|ГОБМП/i, "index.html"],
-    [/Наши доктора|CHECK UP/i, "https://bmcudp.org"]
-  ];
-
-  for (const [re, url] of rules) {
-    if (re.test(t)) {
-      e.preventDefault();
-      e.stopImmediatePropagation();
-      e.stopPropagation();
-      window.location.href = url;
-      return false;
-    }
-  }
-}, true);
-</script>
-
 <!DOCTYPE html>
 <!-- saved from url=(0033)https://bmcudp.kz/ru/med-tourism/ -->
 <html prefix="og: http://ogp.me/ns# profile: http://ogp.me/ns/profile# business: http://ogp.me/ns/business# place: http://ogp.me/ns/place#" class="bx-core bx-win bx-no-touch bx-no-retina bx-chrome desktop landscape"><!--<![endif]--><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -845,10 +814,10 @@ document.addEventListener("click", function (e) {
 	                                                <li itemprop="name"><a href="https://bmcudp.kz/ru/patients/service-audit-of-hospital-quality-of-care/" title="Служба менеджмента качества и безопасности пациента" itemprop="url">Служба менеджмента качества и безопасности пациента</a></li>
                                 
 				</ul></li>	
-	                                                <li itemprop="name"><a href="https://bmcudp.kz/ru/osms-gobmp/" title="ОСМС ГОБМП" itemprop="url">ОСМС ГОБМП</a></li>
+	                                                <li itemprop="name"><a href="index.html" title="ОСМС ГОБМП" itemprop="url">ОСМС ГОБМП</a></li>
                                 
 		
-	                                                <li itemprop="name"><a href="https://bmcudp.kz/ru/our-doctors/" title="Наши доктора" itemprop="url">Наши доктора</a></li>
+	                                                <li itemprop="name"><a href="index.html" title="Наши доктора" itemprop="url">Наши доктора</a></li>
                                 
 		
 						<li itemprop="name">
@@ -999,39 +968,39 @@ document.addEventListener("click", function (e) {
 	                                                <li itemprop="name"><a href="int.html" title="Партнеры Больницы" itemprop="url">Партнеры Больницы</a></li>
                                 
 		
-	                                                <li itemprop="name"><a href="https://bmcudp.kz/ru/med-tourism/partnership/reestr-soglasheniy/" title="Реестр соглашений" itemprop="url">Реестр соглашений</a></li>
+	                                                <li itemprop="name"><a href="int.htmlreestr-soglasheniy/" title="Реестр соглашений" itemprop="url">Реестр соглашений</a></li>
                                 
 				</ul></li>	
-						<li itemprop="name"><a href="https://bmcudp.kz/ru/med-tourism/medical-tourism/" title="Медицинский туризм" itemprop="url">Медицинский туризм</a>
+						<li itemprop="name"><a href="int.html" title="Медицинский туризм" itemprop="url">Медицинский туризм</a>
 				<ul>
 		    
 		
-	                                                <li itemprop="name"><a href="https://bmcudp.kz/ru/med-tourism/medical-tourism/kazakh/" title="Қазақша" itemprop="url">Қазақша</a></li>
+	                                                <li itemprop="name"><a href="int.htmlkazakh/" title="Қазақша" itemprop="url">Қазақша</a></li>
                                 
 		
-	                                                <li itemprop="name"><a href="https://bmcudp.kz/ru/med-tourism/medical-tourism/russian/" title="Русский" itemprop="url">Русский</a></li>
+	                                                <li itemprop="name"><a href="int.htmlrussian/" title="Русский" itemprop="url">Русский</a></li>
                                 
 		
-	                                                <li itemprop="name"><a href="https://bmcudp.kz/ru/med-tourism/medical-tourism/english/" title="English" itemprop="url">English</a></li>
+	                                                <li itemprop="name"><a href="int.htmlenglish/" title="English" itemprop="url">English</a></li>
                                 
 		
-	                                                <li itemprop="name"><a href="https://bmcudp.kz/ru/med-tourism/medical-tourism/german/" title="Deutsch" itemprop="url">Deutsch</a></li>
+	                                                <li itemprop="name"><a href="int.htmlgerman/" title="Deutsch" itemprop="url">Deutsch</a></li>
                                 
 		
-	                                                <li itemprop="name"><a href="https://bmcudp.kz/ru/med-tourism/medical-tourism/french/" title="Français" itemprop="url">Français</a></li>
+	                                                <li itemprop="name"><a href="int.htmlfrench/" title="Français" itemprop="url">Français</a></li>
                                 
 		
-	                                                <li itemprop="name"><a href="https://bmcudp.kz/ru/med-tourism/medical-tourism/arabik/" title="العربية" itemprop="url">العربية</a></li>
+	                                                <li itemprop="name"><a href="int.htmlarabik/" title="العربية" itemprop="url">العربية</a></li>
                                 
 		
-	                                                <li itemprop="name"><a href="https://bmcudp.kz/ru/med-tourism/medical-tourism/kit/" title="中文" itemprop="url">中文</a></li>
+	                                                <li itemprop="name"><a href="int.htmlkit/" title="中文" itemprop="url">中文</a></li>
                                 
 				</ul></li>	
-						<li itemprop="name"><a href="https://bmcudp.kz/ru/med-tourism/online-consultation/" title="Онлайн консультация" itemprop="url">Онлайн консультация</a>
+						<li itemprop="name"><a href="int.html" title="Онлайн консультация" itemprop="url">Онлайн консультация</a>
 				<ul>
 		    
 		
-	                                                <li itemprop="name"><a href="https://bmcudp.kz/ru/med-tourism/online-consultation/organization/" title="Юридическое лицо" itemprop="url">Юридическое лицо</a></li>
+	                                                <li itemprop="name"><a href="int.htmlorganization/" title="Юридическое лицо" itemprop="url">Юридическое лицо</a></li>
                                 
 				</ul></li></ul></li>	
 						<li itemprop="name">
@@ -1921,10 +1890,10 @@ div.lngswitch ul.pagination>.active>span:focus {
 	                                                <li itemprop="name" style="opacity: 0;"><a href="https://bmcudp.kz/ru/patients/service-audit-of-hospital-quality-of-care/" title="Служба менеджмента качества и безопасности пациента" itemprop="url">Служба менеджмента качества и безопасности пациента</a></li>
                                 
 				</ul></li>	
-	                                                <li itemprop="name"><a href="https://bmcudp.kz/ru/osms-gobmp/" title="ОСМС ГОБМП" itemprop="url">ОСМС ГОБМП</a></li>
+	                                                <li itemprop="name"><a href="index.html" title="ОСМС ГОБМП" itemprop="url">ОСМС ГОБМП</a></li>
                                 
 		
-	                                                <li itemprop="name"><a href="https://bmcudp.kz/ru/our-doctors/" title="Наши доктора" itemprop="url">Наши доктора</a></li>
+	                                                <li itemprop="name"><a href="index.html" title="Наши доктора" itemprop="url">Наши доктора</a></li>
                                 
 		
 						<li itemprop="name">
@@ -2065,49 +2034,49 @@ div.lngswitch ul.pagination>.active>span:focus {
 				<ul style="display: none;">
 		    
 		
-						<li itemprop="name" style="opacity: 0;"><a href="https://bmcudp.kz/ru/med-tourism/partnership/" title="Партнерство" itemprop="url" class="sf-with-ul">Партнерство</a>
+						<li itemprop="name" style="opacity: 0;"><a href="int.html" title="Партнерство" itemprop="url" class="sf-with-ul">Партнерство</a>
 				<ul style="display: none;">
 		    
 		
-	                                                <li itemprop="name" style="opacity: 0;"><a href="https://bmcudp.kz/ru/med-tourism/partnership/otdel-vzaimodeystviya-s-partnerskimi-klinikami-i-razvitiya-meditsinskogo-turizma/" title="Отдел международного сотрудничества и прессы" itemprop="url">Отдел международного сотрудничества и прессы</a></li>
+	                                                <li itemprop="name" style="opacity: 0;"><a href="int.htmlotdel-vzaimodeystviya-s-partnerskimi-klinikami-i-razvitiya-meditsinskogo-turizma/" title="Отдел международного сотрудничества и прессы" itemprop="url">Отдел международного сотрудничества и прессы</a></li>
                                 
 		
-	                                                <li itemprop="name" style="opacity: 0;"><a href="https://bmcudp.kz/ru/med-tourism/partnership/partnery-bolnitsy/" title="Партнеры Больницы" itemprop="url">Партнеры Больницы</a></li>
+	                                                <li itemprop="name" style="opacity: 0;"><a href="int.htmlpartnery-bolnitsy/" title="Партнеры Больницы" itemprop="url">Партнеры Больницы</a></li>
                                 
 		
-	                                                <li itemprop="name" style="opacity: 0;"><a href="https://bmcudp.kz/ru/med-tourism/partnership/reestr-soglasheniy/" title="Реестр соглашений" itemprop="url">Реестр соглашений</a></li>
+	                                                <li itemprop="name" style="opacity: 0;"><a href="int.htmlreestr-soglasheniy/" title="Реестр соглашений" itemprop="url">Реестр соглашений</a></li>
                                 
 				</ul></li>	
-						<li itemprop="name" style="opacity: 0;"><a href="https://bmcudp.kz/ru/med-tourism/medical-tourism/" title="Медицинский туризм" itemprop="url" class="sf-with-ul">Медицинский туризм</a>
+						<li itemprop="name" style="opacity: 0;"><a href="int.html" title="Медицинский туризм" itemprop="url" class="sf-with-ul">Медицинский туризм</a>
 				<ul style="display: none;">
 		    
 		
-	                                                <li itemprop="name" style="opacity: 0;"><a href="https://bmcudp.kz/ru/med-tourism/medical-tourism/kazakh/" title="Қазақша" itemprop="url">Қазақша</a></li>
+	                                                <li itemprop="name" style="opacity: 0;"><a href="int.htmlkazakh/" title="Қазақша" itemprop="url">Қазақша</a></li>
                                 
 		
-	                                                <li itemprop="name" style="opacity: 0;"><a href="https://bmcudp.kz/ru/med-tourism/medical-tourism/russian/" title="Русский" itemprop="url">Русский</a></li>
+	                                                <li itemprop="name" style="opacity: 0;"><a href="int.htmlrussian/" title="Русский" itemprop="url">Русский</a></li>
                                 
 		
-	                                                <li itemprop="name" style="opacity: 0;"><a href="https://bmcudp.kz/ru/med-tourism/medical-tourism/english/" title="English" itemprop="url">English</a></li>
+	                                                <li itemprop="name" style="opacity: 0;"><a href="int.htmlenglish/" title="English" itemprop="url">English</a></li>
                                 
 		
-	                                                <li itemprop="name" style="opacity: 0;"><a href="https://bmcudp.kz/ru/med-tourism/medical-tourism/german/" title="Deutsch" itemprop="url">Deutsch</a></li>
+	                                                <li itemprop="name" style="opacity: 0;"><a href="int.htmlgerman/" title="Deutsch" itemprop="url">Deutsch</a></li>
                                 
 		
-	                                                <li itemprop="name" style="opacity: 0;"><a href="https://bmcudp.kz/ru/med-tourism/medical-tourism/french/" title="Français" itemprop="url">Français</a></li>
+	                                                <li itemprop="name" style="opacity: 0;"><a href="int.htmlfrench/" title="Français" itemprop="url">Français</a></li>
                                 
 		
-	                                                <li itemprop="name" style="opacity: 0;"><a href="https://bmcudp.kz/ru/med-tourism/medical-tourism/arabik/" title="العربية" itemprop="url">العربية</a></li>
+	                                                <li itemprop="name" style="opacity: 0;"><a href="int.htmlarabik/" title="العربية" itemprop="url">العربية</a></li>
                                 
 		
-	                                                <li itemprop="name" style="opacity: 0;"><a href="https://bmcudp.kz/ru/med-tourism/medical-tourism/kit/" title="中文" itemprop="url">中文</a></li>
+	                                                <li itemprop="name" style="opacity: 0;"><a href="int.htmlkit/" title="中文" itemprop="url">中文</a></li>
                                 
 				</ul></li>	
-						<li itemprop="name" style="opacity: 0;"><a href="https://bmcudp.kz/ru/med-tourism/online-consultation/" title="Онлайн консультация" itemprop="url" class="sf-with-ul">Онлайн консультация</a>
+						<li itemprop="name" style="opacity: 0;"><a href="int.html" title="Онлайн консультация" itemprop="url" class="sf-with-ul">Онлайн консультация</a>
 				<ul style="display: none;">
 		    
 		
-	                                                <li itemprop="name" style="opacity: 0;"><a href="https://bmcudp.kz/ru/med-tourism/online-consultation/organization/" title="Юридическое лицо" itemprop="url">Юридическое лицо</a></li>
+	                                                <li itemprop="name" style="opacity: 0;"><a href="int.htmlorganization/" title="Юридическое лицо" itemprop="url">Юридическое лицо</a></li>
                                 
 				</ul></li></ul></li>	
 						<li itemprop="name">
@@ -2355,9 +2324,9 @@ div.lngswitch ul.pagination>.active>span:focus {
 <!--<div class="container">
 	<section class="ins5">-->
 <h1>International</h1>		<div class="list-group" style="padding-top: 10px;">
-			<a href="https://bmcudp.kz/ru/med-tourism/partnership/" class="list-group-item"><h4>Партнерство</h4></a>
-			<a href="https://bmcudp.kz/ru/med-tourism/medical-tourism/" class="list-group-item"><h4>Медицинский туризм</h4></a>
-			<a href="https://bmcudp.kz/ru/med-tourism/online-consultation/" class="list-group-item"><h4>Онлайн консультация</h4></a>
+			<a href="int.html" class="list-group-item"><h4>Партнерство</h4></a>
+			<a href="int.html" class="list-group-item"><h4>Медицинский туризм</h4></a>
+			<a href="int.html" class="list-group-item"><h4>Онлайн консультация</h4></a>
 		</div>
 <!--	</section>
 </div>-->
@@ -3486,7 +3455,7 @@ $(document).ready(function(){
 				</ul></li>	
 	                                                <li itemprop="name"><a href="https://bmcudp.kz/ru/patients/service-audit-of-hospital-quality-of-care/" title="Служба менеджмента качества и безопасности пациента" itemprop="url">Служба менеджмента качества и безопасности пациента</a></li>
                                 
-				</ul></li><li><a href="https://bmcudp.kz/ru/osms-gobmp/" title="ОСМС ГОБМП" itemprop="url">ОСМС ГОБМП</a></li><li><a href="https://bmcudp.kz/ru/our-doctors/" title="Наши доктора" itemprop="url">Наши доктора</a></li><li><a href="https://bmcudp.kz/ru/activities/" title="Направления" itemprop="url" class="rd-with-ul">Направления<span class="rd-submenu-toggle"></span></a><ul class="rd-mobilemenu_submenu" style="display: none;">
+				</ul></li><li><a href="index.html" title="ОСМС ГОБМП" itemprop="url">ОСМС ГОБМП</a></li><li><a href="index.html" title="Наши доктора" itemprop="url">Наши доктора</a></li><li><a href="https://bmcudp.kz/ru/activities/" title="Направления" itemprop="url" class="rd-with-ul">Направления<span class="rd-submenu-toggle"></span></a><ul class="rd-mobilemenu_submenu" style="display: none;">
 		    
 		
 	                                                <li itemprop="name"><a href="https://bmcudp.kz/ru/activities/poliklinika/" title="Поликлиника" itemprop="url">Поликлиника</a></li>
@@ -3616,49 +3585,49 @@ $(document).ready(function(){
 				</ul></li><li class="active"><a href="https://bmcudp.kz/ru/med-tourism/" title="International" itemprop="url" class="rd-with-ul">International<span class="rd-submenu-toggle"></span></a><ul class="rd-mobilemenu_submenu" style="display: none;">
 		    
 		
-						<li itemprop="name"><a href="https://bmcudp.kz/ru/med-tourism/partnership/" title="Партнерство" itemprop="url">Партнерство</a>
+						<li itemprop="name"><a href="int.html" title="Партнерство" itemprop="url">Партнерство</a>
 				<ul>
 		    
 		
-	                                                <li itemprop="name"><a href="https://bmcudp.kz/ru/med-tourism/partnership/otdel-vzaimodeystviya-s-partnerskimi-klinikami-i-razvitiya-meditsinskogo-turizma/" title="Отдел международного сотрудничества и прессы" itemprop="url">Отдел международного сотрудничества и прессы</a></li>
+	                                                <li itemprop="name"><a href="int.htmlotdel-vzaimodeystviya-s-partnerskimi-klinikami-i-razvitiya-meditsinskogo-turizma/" title="Отдел международного сотрудничества и прессы" itemprop="url">Отдел международного сотрудничества и прессы</a></li>
                                 
 		
-	                                                <li itemprop="name"><a href="https://bmcudp.kz/ru/med-tourism/partnership/partnery-bolnitsy/" title="Партнеры Больницы" itemprop="url">Партнеры Больницы</a></li>
+	                                                <li itemprop="name"><a href="int.htmlpartnery-bolnitsy/" title="Партнеры Больницы" itemprop="url">Партнеры Больницы</a></li>
                                 
 		
-	                                                <li itemprop="name"><a href="https://bmcudp.kz/ru/med-tourism/partnership/reestr-soglasheniy/" title="Реестр соглашений" itemprop="url">Реестр соглашений</a></li>
+	                                                <li itemprop="name"><a href="int.htmlreestr-soglasheniy/" title="Реестр соглашений" itemprop="url">Реестр соглашений</a></li>
                                 
 				</ul></li>	
-						<li itemprop="name"><a href="https://bmcudp.kz/ru/med-tourism/medical-tourism/" title="Медицинский туризм" itemprop="url">Медицинский туризм</a>
+						<li itemprop="name"><a href="int.html" title="Медицинский туризм" itemprop="url">Медицинский туризм</a>
 				<ul>
 		    
 		
-	                                                <li itemprop="name"><a href="https://bmcudp.kz/ru/med-tourism/medical-tourism/kazakh/" title="Қазақша" itemprop="url">Қазақша</a></li>
+	                                                <li itemprop="name"><a href="int.htmlkazakh/" title="Қазақша" itemprop="url">Қазақша</a></li>
                                 
 		
-	                                                <li itemprop="name"><a href="https://bmcudp.kz/ru/med-tourism/medical-tourism/russian/" title="Русский" itemprop="url">Русский</a></li>
+	                                                <li itemprop="name"><a href="int.htmlrussian/" title="Русский" itemprop="url">Русский</a></li>
                                 
 		
-	                                                <li itemprop="name"><a href="https://bmcudp.kz/ru/med-tourism/medical-tourism/english/" title="English" itemprop="url">English</a></li>
+	                                                <li itemprop="name"><a href="int.htmlenglish/" title="English" itemprop="url">English</a></li>
                                 
 		
-	                                                <li itemprop="name"><a href="https://bmcudp.kz/ru/med-tourism/medical-tourism/german/" title="Deutsch" itemprop="url">Deutsch</a></li>
+	                                                <li itemprop="name"><a href="int.htmlgerman/" title="Deutsch" itemprop="url">Deutsch</a></li>
                                 
 		
-	                                                <li itemprop="name"><a href="https://bmcudp.kz/ru/med-tourism/medical-tourism/french/" title="Français" itemprop="url">Français</a></li>
+	                                                <li itemprop="name"><a href="int.htmlfrench/" title="Français" itemprop="url">Français</a></li>
                                 
 		
-	                                                <li itemprop="name"><a href="https://bmcudp.kz/ru/med-tourism/medical-tourism/arabik/" title="العربية" itemprop="url">العربية</a></li>
+	                                                <li itemprop="name"><a href="int.htmlarabik/" title="العربية" itemprop="url">العربية</a></li>
                                 
 		
-	                                                <li itemprop="name"><a href="https://bmcudp.kz/ru/med-tourism/medical-tourism/kit/" title="中文" itemprop="url">中文</a></li>
+	                                                <li itemprop="name"><a href="int.htmlkit/" title="中文" itemprop="url">中文</a></li>
                                 
 				</ul></li>	
-						<li itemprop="name"><a href="https://bmcudp.kz/ru/med-tourism/online-consultation/" title="Онлайн консультация" itemprop="url">Онлайн консультация</a>
+						<li itemprop="name"><a href="int.html" title="Онлайн консультация" itemprop="url">Онлайн консультация</a>
 				<ul>
 		    
 		
-	                                                <li itemprop="name"><a href="https://bmcudp.kz/ru/med-tourism/online-consultation/organization/" title="Юридическое лицо" itemprop="url">Юридическое лицо</a></li>
+	                                                <li itemprop="name"><a href="int.htmlorganization/" title="Юридическое лицо" itemprop="url">Юридическое лицо</a></li>
                                 
 				</ul></li></ul></li><li><a href="https://bmcudp.kz/ru/science-and-education/" title="Наука и Образование" itemprop="url" class="rd-with-ul">Наука и Образование<span class="rd-submenu-toggle"></span></a><ul class="rd-mobilemenu_submenu" style="display: none;">
 		    
